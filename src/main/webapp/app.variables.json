@@ -23,6 +23,17 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_pgEmployeeReg" : {
+    "_id" : "wm-goToPage_pgEmployeeReg-wm.NavigationVariable-1502695887363",
+    "name" : "goToPage_pgEmployeeReg",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "pgEmployeeReg",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",
@@ -34,5 +45,34 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
+  },
+  "svReportVr" : {
+    "_id" : "wm-svReportVr-wm.ServiceVariable-1502704325114",
+    "name" : "svReportVr",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "jrxml",
+      "value" : "employee.jrxml",
+      "type" : "string"
+    }, {
+      "target" : "database",
+      "value" : "employee",
+      "type" : "string"
+    } ],
+    "service" : "MyJavaService",
+    "operation" : "generatePdfReport",
+    "operationId" : "MyJavaController_generatePdfReport",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "MyJava"
   }
 }

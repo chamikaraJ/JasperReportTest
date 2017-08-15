@@ -23,6 +23,10 @@
   "type" : "LEFTNAV",
   "params" : [ ]
 }, {
+  "name" : "pgEmployeeReg",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
   "name" : "rightnav",
   "type" : "RIGHTNAV",
   "params" : [ ]

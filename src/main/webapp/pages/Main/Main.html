@@ -3,7 +3,10 @@
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="8" name="mainContent" padding="unset 15px">
+            <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1" on-click="Variables.svReportVr.invoke()"></wm-button>
+            <wm-label padding="unset 0.5em" name="label1" caption="bind:Variables.svReportVr.dataSet.value"></wm-label>
+            <wm-iframe name="iframe1" width="100%" height="300px" iframesrc="services/myJava/generatePdfReport?jrxml=employee.jrxml&amp;database=employee"></wm-iframe>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
