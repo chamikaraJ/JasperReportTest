@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="FileTransfer" class="com.jasperreporttest.filetransfer.FileTransfer" type="JavaService" springFile="FileTransfer.spring.xml">
+    <dataobjects/>
+</service>

@@ -34,6 +34,17 @@
     "dataSet" : [ ],
     "pageTransitions" : "none"
   },
+  "goToPage_UploadFile" : {
+    "_id" : "wm-goToPage_UploadFile-wm.NavigationVariable-1502858025905",
+    "name" : "goToPage_UploadFile",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "UploadFile",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",
