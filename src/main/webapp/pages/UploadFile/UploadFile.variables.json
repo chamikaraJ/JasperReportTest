@@ -1,1 +1,24 @@
-{ }
+{
+  "svFileTransfer" : {
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1502859507334",
+    "name" : "svFileTransfer",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "service" : "FileTransfer",
+    "operation" : "doUpload",
+    "operationId" : "FileTransferController_doUpload",
+    "operationType" : "post",
+    "serviceType" : "JavaService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "FileTransfer"
+  }
+}

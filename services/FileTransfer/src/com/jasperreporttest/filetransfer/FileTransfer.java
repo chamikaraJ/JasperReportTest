@@ -22,6 +22,9 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.web.multipart.MultipartFile;
 import com.wavemaker.runtime.server.ParamName;
 
+// import com.wavemaker.runtime.server.DownloadResponse;
+import java.io.FileInputStream;
+
 
 //import com.jasperreporttest.filetransfer.model.*;
 
@@ -57,7 +60,8 @@ public class FileTransfer {
     /** UPLOADS stores the location of files on disk. Windows users
      * must update this; Mac & Linux should be fine. */
      
-        private File UPLOADS = new File("/tmp/uploads");
+        private File UPLOADS = getUploadDir();
+        
         public void doUpload(@ParamName(name="file") MultipartFile file) throws IOException {
             File outputFile = new File(UPLOADS, file.getOriginalFilename());
             System.out.println("writing the content of uploaded file to: "+outputFile);
@@ -66,6 +70,25 @@ public class FileTransfer {
             file.getInputStream().close();
             fos.close();
         }
+        
+        public File getUploadDir() {
+        String uploadDir = System.getProperty("user.home") + "/WaveMaker/appdata/TESTPDF/uploads";
+        File f = new File(uploadDir);
+        f.mkdirs();
+        return f;
+    }
+    
+    // public DownloadResponse doDownload(@ParamName(name="filename") String filename) throws IOException {
+        
+    //     DownloadResponse ret = new DownloadResponse();
+    //     fileName = "jasper.pdf",
+    //     String filePath = System.getProperty("user.home") + "/WaveMaker/appdata/TESTPDF/uploads";
+    //     File localFile = new File(filePath, filename);
+    //     FileInputStream fis = new FileInputStream(localFile);
+    //     ret.setContents(fis);
+    //     ret.setFileName(filename);
+    //     return ret;
+    //     }
     
 
 }

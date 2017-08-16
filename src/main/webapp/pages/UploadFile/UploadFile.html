@@ -1,6 +1,8 @@
-<wm-page data-ng-controller="UploadFilePageController" pagetitle="Upload File"> 
-    <wm-content> 
-        <wm-page-content columnwidth="12"> 
-        </wm-page-content> 
-    </wm-content> 
+<wm-page data-ng-controller="UploadFilePageController" pagetitle="Upload File" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-button class="btn-default" caption="Home" type="button" margin="unset 0.5em" name="button1" on-click="Variables.goToPage_Main.invoke()"></wm-button>
+            <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
+        </wm-page-content>
+    </wm-content>
 </wm-page>
