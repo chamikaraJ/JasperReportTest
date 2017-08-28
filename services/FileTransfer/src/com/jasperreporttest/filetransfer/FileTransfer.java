@@ -23,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.wavemaker.runtime.server.ParamName;
 
 // import com.wavemaker.runtime.server.DownloadResponse;
+import com.wavemaker.runtime.file.model.DownloadResponse;
 import java.io.FileInputStream;
 
 
@@ -78,17 +79,17 @@ public class FileTransfer {
         return f;
     }
     
-    // public DownloadResponse doDownload(@ParamName(name="filename") String filename) throws IOException {
+    public DownloadResponse doDownload(@ParamName(name="filename") String filename) throws IOException {
         
-    //     DownloadResponse ret = new DownloadResponse();
-    //     fileName = "jasper.pdf",
-    //     String filePath = System.getProperty("user.home") + "/WaveMaker/appdata/TESTPDF/uploads";
-    //     File localFile = new File(filePath, filename);
-    //     FileInputStream fis = new FileInputStream(localFile);
-    //     ret.setContents(fis);
-    //     ret.setFileName(filename);
-    //     return ret;
-    //     }
+        DownloadResponse ret = new DownloadResponse();
+        String fileName = "jasper.pdf";
+        String filePath = System.getProperty("user.home") + "/WaveMaker/appdata/TESTPDF/uploads";
+        File localFile = new File(filePath, fileName);
+        FileInputStream fis = new FileInputStream(localFile);
+        ret.setContents(fis);
+        ret.setFileName(fileName);
+        return ret;
+        }
     
 
 }

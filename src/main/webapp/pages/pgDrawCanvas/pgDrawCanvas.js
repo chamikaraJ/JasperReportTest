@@ -1,4 +1,4 @@
-Application.$controller("UploadFilePageController", ["$scope", function($scope) {
+Application.$controller("pgDrawCanvasPageController", ["$scope", function($scope) {
     "use strict";
 
     /* perform any action on widgets/variables within this block */
@@ -12,20 +12,14 @@ Application.$controller("UploadFilePageController", ["$scope", function($scope) 
          * e.g. to get value of text widget named 'username' use following script
          * '$scope.Widgets.username.datavalue'
          */
+
+        $(document).ready(function() {
+            $('#smoothed').signaturePad({
+                drawOnly: true,
+                drawBezierCurves: true,
+                lineTop: 200
+            });
+        });
     };
 
-
-    $scope.text1Click = function($event, $isolateScope) {
-
-    };
-
-
-
-
-
-        $scope.text1Change = function ($event, $isolateScope, newVal, oldVal) { 
-
-        };
- 
-    }
-]);
+}]);

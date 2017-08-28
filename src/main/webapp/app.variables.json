@@ -45,6 +45,17 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_pgDrawCanvas" : {
+    "_id" : "wm-goToPage_pgDrawCanvas-wm.NavigationVariable-1503906191084",
+    "name" : "goToPage_pgDrawCanvas",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "pgDrawCanvas",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
   "goToPage_pgEmployeeReg" : {
     "_id" : "wm-goToPage_pgEmployeeReg-wm.NavigationVariable-1502695887363",
     "name" : "goToPage_pgEmployeeReg",

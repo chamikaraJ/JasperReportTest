@@ -3,6 +3,12 @@
         <wm-page-content columnwidth="12" name="page_content1">
             <wm-button class="btn-default" caption="Home" type="button" margin="unset 0.5em" name="button1" on-click="Variables.goToPage_Main.invoke()"></wm-button>
             <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile"></wm-fileupload>
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3 control-label" name="label2_1" caption="File Name"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-text name="text1" on-change="text1Change($event, $scope, newVal, oldVal)"></wm-text>
+                </wm-container>
+            </wm-composite>
         </wm-page-content>
     </wm-content>
 </wm-page>

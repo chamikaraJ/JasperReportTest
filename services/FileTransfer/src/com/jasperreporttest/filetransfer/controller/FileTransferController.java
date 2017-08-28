@@ -2,8 +2,10 @@
 package com.jasperreporttest.filetransfer.controller;
 
 import com.jasperreporttest.filetransfer.FileTransfer;
-import org.springframework.web.multipart.MultipartFile;
+import java.lang.String;
 import java.io.IOException;
+import com.wavemaker.runtime.file.model.DownloadResponse;
+import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.MediaType;
@@ -20,6 +22,11 @@ public class FileTransferController {
 
     @Autowired
     private FileTransfer fileTransfer;
+
+    @RequestMapping(value = "/doDownload", produces = "application/octet-stream", method = RequestMethod.GET)
+    public DownloadResponse doDownload(@RequestParam(value = "filename", required = false) String filename) throws IOException {
+        return fileTransfer.doDownload(filename);
+    }
 
     @RequestMapping(value = "/doUpload", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
